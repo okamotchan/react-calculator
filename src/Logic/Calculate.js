@@ -37,7 +37,7 @@ export default function Calculate(obj, buttonName) {
 
   if (buttonName === "%") {
     if (obj.operation && obj.next) {
-      const result = operate(obj.total, obj.next, obj.operation);
+      const result = Operate(obj.total, obj.next, obj.operation);
       return {
         total: Big(result)
           .div(Big("100"))
